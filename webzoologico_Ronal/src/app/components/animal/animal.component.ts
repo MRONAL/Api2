@@ -10,10 +10,12 @@ import { AnimalService } from '../../services/animal.service';
 export class AnimalComponent {
 animalList: any = [];
 constructor(private animalService: AnimalService){ }
+
 getAllAnimals(){
   console.log('en componente');
   this.animalService.getAllAnimalsData().subscribe((data: {}) => {
     this.animalList=data;
+    console.log(data)
   });
 }
 ngOnInit(){

@@ -13,6 +13,7 @@ httpOptions= new HttpHeaders().set('Content-Type', 'aplication/json');
 
 
 getAllAnimalsData(): Observable<any> {
+  console.log(this.http.get<any>(this.apiUri))
 return this.http.get<any>(this.apiUri)
 }
 
